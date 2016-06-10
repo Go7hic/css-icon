@@ -1,0 +1,121 @@
+[class*=icono-], [class*=icono-] * {
+  box-sizing: border-box;
+}
+
+[class*=icon-] {
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  font-style: normal;
+  text-align: left;
+  direction: ltr;
+}
+
+[class*=icon-]:after, [class*=icon-]:before {
+  content: '';
+  pointer-events: none;
+  background: #555;
+}
+
+[class*=icono-][class*=Circle] {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+}
+
+.icon-check {
+  width: 28px;
+  height: 28px;
+  margin: 3px 0 3px 6px;
+  transform: rotate(-45deg);
+  &:before {
+    width: 20px;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:after {
+    position: absolute;
+    height: 12px;
+    width: 2px;
+    left: 4px;
+    bottom: 14px;
+  }
+}
+
+.icon-cross {
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+  transform: rotate(45deg);
+  &:before {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 2px;
+  }
+  &:after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    height: 20px;
+    width: 2px;
+  }
+}
+
+.icon-plus {
+  width: 30px;
+  height: 30px;
+  margin: 2px;
+  &:before, &:after {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:before {
+    width: 20px;
+    height: 2px;
+  }
+  &:after {
+    width: 2px;
+    height: 20px;
+  }
+}
+
+.icon-hamburger {
+  width: 20px;
+  height: 2px;
+  box-shadow: inset 0 0 0 32px, 0 -6px, 0 6px;
+  margin: 16px 7px;
+}
+
+.icon-caretRight {
+  width: 12px;
+  height: 20px;
+  margin: 7px 11px;
+  &:before, &:after {
+    width: 14px;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    margin: auto 0;
+    right: 2px;
+    box-shadow: inset 0 0 0 32px;
+    transform-origin: right;
+  }
+  &:before {
+    top: 2px;
+    transform: rotate(45deg);
+  }
+  &:after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
